@@ -23,16 +23,16 @@ void moveToFront(film array[], int n)
     int j=n-1;
     while(i<j)
         {
-            while(i<j && array[j].premii == 0)
-                j--;
-            if(array[i].premii == 0)
+            while(i<j && array[i].premii == 0)
+                i++;
+            if(array[j].premii == 0)
                 {
                     film temp;
                     temp = array[j];
                     array[j] = array[i];
                     array[i] = temp;
                 }
-            i++;
+            j--;
         }
 }
 
